@@ -10,6 +10,18 @@ This repository contains an implementation of a multi-agent consensus system. Th
 
 This image illustrates the adjacency matrix representing the connectivity between agents in the multi-agent consensus system.
 
+## Heading Visualization
+
+![Heading Visualization](heading.jpg)
+
+This image illustrates the evolution of heading angles for all agents over time in the multi-agent consensus system.
+
+## Position Visualization
+
+![Position Visualization](position.jpg)
+
+This image shows the trajectories of all agents in the 2D space over time in the multi-agent consensus system.
+
 
 ## Requirements
 
