@@ -32,6 +32,18 @@ AllXpositions =states(:,7:12)';
 AllYpositions =states(:,13:18)';
 
 
+%% heading plot
+figure;
+hold on;
+
+for i = 1:size(AllHeadings, 1)
+    plot(AllHeadings(i, :));
+end
+
+title("Heading angles for all nodes")
+xlabel("Time")
+ylabel("heading angle")
+
 
 
 %% functions
