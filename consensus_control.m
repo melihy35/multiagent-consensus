@@ -11,3 +11,11 @@ Xpositions=zeros(6,1);% x position for 6 nodes,it will contains all positions
 Ypositions=zeros(6,1);% y position for 6 nodes,it will contains all positions
 
 IC =[InitHeadings Xpositions Ypositions];
+
+%% Adjacency matrix 
+A= [0 0 1 0 0 0;
+    1 0 0 0 0 1;
+    1 1 0 0 0 0;
+    0 1 0 0 0 0;
+    0 0 1 0 0 0;
+    0 0 0 1 1 0]; 
