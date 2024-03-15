@@ -44,7 +44,17 @@ title("Heading angles for all nodes")
 xlabel("Time")
 ylabel("heading angle")
 
+%% position plot 
+figure;
+hold on;
 
+for i = 1:size(AllXpositions, 1)
+    plot(AllXpositions(i,  :),AllYpositions(i , :));
+end
+
+title("Positions for all nodes")
+xlabel("x position")
+ylabel("y position")
 
 %% functions
 function [L] = Laplacian(matrix)   
