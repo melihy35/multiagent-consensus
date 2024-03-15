@@ -19,3 +19,14 @@ A= [0 0 1 0 0 0;
     0 1 0 0 0 0;
     0 0 1 0 0 0;
     0 0 0 1 1 0]; 
+
+L=Laplacian(A); % graph Laplacian matrix
+
+
+%% update all iterations continuously
+
+[t,states] = ode23();
+
+AllHeadings =states(:,1:6)';
+AllXpositions =states(:,7:12)';
+AllYpositions =states(:,13:18)';
