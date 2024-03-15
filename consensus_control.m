@@ -25,8 +25,28 @@ L=Laplacian(A); % graph Laplacian matrix
 
 %% update all iterations continuously
 
-[t,states] = ode23();
+[t,states] = ode23(@(t, states) updatefunc(t,states,V,L), time, IC);
 
 AllHeadings =states(:,1:6)';
 AllXpositions =states(:,7:12)';
 AllYpositions =states(:,13:18)';
+
+
+
+
+%% functions
+function [L] = Laplacian(matrix)   
+    D=zeros(6); %initialize of in-degree matrix
+    for i = 1:6
+        D(i,i) =sum(matrix(i,:)); % find in-degree matrix
+    end 
+    L= D-matrix; % return graph Laplacian matrix
+end
+
+function NewStates = updatefunc(t,states,V,L)
+
+    newTheta =-L*states(1:6);
+    newX = V*sin(states(1:6));
+    newY = V*cos(states(1:6));
+    NewStates = [newTheta;newX;newY];
+end
